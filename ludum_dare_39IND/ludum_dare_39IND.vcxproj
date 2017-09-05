@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Static|Win32">
+      <Configuration>Debug Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|Win32">
+      <Configuration>Release Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7BE53AA-C5FF-4251-9DDA-4F68CFB00A67}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Basic_State_SFML</RootNamespace>
+    <ProjectName>ludum_dare_39IND</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\thor-v2.0-msvc2013\include;D:\Box2D-master\Box2D;D:\entityx-1.2.0\entityx\3rdparty;D:\libtmx-parser-master\src;D:\lua5.3Exe\include;D:\LuaBridge-master\Source\LuaBridge;D:\tinyxml2-master;D:\SFML\SFML32\SFML-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\thor-v2.0-msvc2013\lib;D:\Box2D-master\Box2D\Build\vs2015\bin\x32\Debug;D:\lua5.3Exe;D:\SFML\SFML32\SFML-2.3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;thor-d.lib;liblua53.a;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\SFML\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\SFML\SFML-2.1\extlibs\libs-msvc\x86;C:\SFML\SFML-2.1\Staitc Libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\thor-v2.0-msvc2013\include;D:\SFML\SFML32\SFML-2.3.1\include;D:\LuaBridge-master\Source\LuaBridge;D:\lua5.3Exe\include;D:\Box2D-master\Box2D;D:\entityx-1.2.0\entityx\3rdparty;D:\tinyxml2-master;D:\libtmx-parser-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;sfml-main.lib;thor.lib;liblua53.a;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\thor-v2.0-msvc2013\lib;D:\SFML\SFML32\SFML-2.3.1\lib;D:\Box2D-master\Box2D\Build\vs2015\bin\x32\Release;D:\lua5.3Exe;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;SFML_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Box2D-master\Box2D;D:\tinyxml2-master;D:\SFML\SFML32\SFML-2.3.1\include;D:\LuaBridge-master\Source\LuaBridge;D:\lua5.3Exe\include;D:\libtmx-parser-master\src;D:\entityx-1.2.0\entityx\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;sfml-main.lib;liblua53.a;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Box2D-master\Box2D\Build\vs2015\bin\x32\Release;D:\SFML\SFML32\SFML-2.3.1\lib;D:\lua5.3Exe;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\libtmx-parser-master\src\tmxparser.cpp" />
+    <ClCompile Include="..\..\..\tinyxml2-master\tinyxml2.cpp" />
+    <ClCompile Include="Component\ParticleEmitterComponent.cpp" />
+    <ClCompile Include="Helper\RayCast.cpp" />
+    <ClCompile Include="Component\SpaceShipComponent.cpp" />
+    <ClCompile Include="Component\PlanetSpawnComponent.cpp" />
+    <ClCompile Include="Event\InvasionEvent.cpp" />
+    <ClCompile Include="System\PlanetSpawnSystem.cpp" />
+    <ClCompile Include="System\ThorParticleSystem.cpp" />
+    <ClCompile Include="WindowState\GameOverState.cpp" />
+    <ClCompile Include="GUI\OrderSpriteBar.cpp" />
+    <ClCompile Include="System\AnimationSystem.cpp" />
+    <ClCompile Include="Audio\AudioManager.cpp" />
+    <ClCompile Include="Component\AI\ScriptAIComponent.cpp" />
+    <ClCompile Include="Component\AI\ScriptAIState.cpp" />
+    <ClCompile Include="Component\AI\ScriptAITransition.cpp" />
+    <ClCompile Include="Component\AI\SteeringBehavior.cpp" />
+    <ClCompile Include="Event\EntityCollidesEntityEvent.cpp" />
+    <ClCompile Include="CustomBox2D\Fixture\BaseFixtureData.cpp" />
+    <ClCompile Include="CustomBox2D\Fixture\FixtureData.cpp" />
+    <ClCompile Include="CustomBox2D\Fixture\PolygonFixtureData.cpp" />
+    <ClCompile Include="GUI\CircleBar.cpp" />
+    <ClCompile Include="GUI\MeterBar.cpp" />
+    <ClCompile Include="Helper\Math.cpp" />
+    <ClCompile Include="Component\RealTimeInputComponent.cpp" />
+    <ClCompile Include="Component\InstanceComponent.cpp" />
+    <ClCompile Include="System\ScriptAISystem.cpp" />
+    <ClCompile Include="System\RealTimeInputSystem.cpp" />
+    <ClCompile Include="StateEvent\Command\BaseStateEventCommand.cpp" />
+    <ClCompile Include="Event\PlayerCollidesSolidEntityEvent.cpp" />
+    <ClCompile Include="System\JumpSystem.cpp" />
+    <ClCompile Include="System\ScriptUpdateSystem.cpp" />
+    <ClCompile Include="Component\Animation.cpp" />
+    <ClCompile Include="Component\AnimationComponent.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Component\AutoBody2dMovementComponent.cpp" />
+    <ClCompile Include="Component\JumpComponent.cpp" />
+    <ClCompile Include="System\AutoBody2dMovementSystem.cpp" />
+    <ClCompile Include="System\AutomaticMovementSystem.cpp" />
+    <ClCompile Include="Component\AutomaticPathComponent.cpp" />
+    <ClCompile Include="GUI\GUIAction\BaseAction.cpp" />
+    <ClCompile Include="Event\BaseEvent.cpp" />
+    <ClCompile Include="GUI\BaseGuiComponent.cpp" />
+    <ClCompile Include="StateEvent\BaseStateEvent.cpp" />
+    <ClCompile Include="System\BaseSystem.cpp" />
+    <ClCompile Include="Component\Body2dComponent.cpp" />
+    <ClCompile Include="System\Box2DWorldSystem.cpp" />
+    <ClCompile Include="System\Camera.cpp" />
+    <ClCompile Include="Component\CategoryComponent.cpp" />
+    <ClCompile Include="Component\Component.cpp" />
+    <ClCompile Include="Component\ComponentArranger.cpp" />
+    <ClCompile Include="Component\DestroyableComponent.cpp" />
+    <ClCompile Include="System\DualEntitySystem.cpp" />
+    <ClCompile Include="CustomBox2D\EngineContactListener.cpp" />
+    <ClCompile Include="Entity\Entity.cpp" />
+    <ClCompile Include="Component\EntityChildrenComponent.cpp" />
+    <ClCompile Include="Event\EntityClickedEvent.cpp" />
+    <ClCompile Include="Entity\EntityManager.cpp" />
+    <ClCompile Include="Component\EntityParentComponent.cpp" />
+    <ClCompile Include="Event\Event.cpp" />
+    <ClCompile Include="Event\EventManager.cpp" />
+    <ClCompile Include="CustomBox2D\Fixture\TileSideFixtureData.cpp" />
+    <ClCompile Include="Tile\TileSidesSensorGenerator.cpp" />
+    <ClCompile Include="WindowState\Game.cpp" />
+    <ClCompile Include="Component\ObstacleComponent.cpp" />
+    <ClCompile Include="System\ObstacleSystem.cpp" />
+    <ClCompile Include="CustomBox2D\SfDebugB2Draw.cpp" />
+    <ClCompile Include="StateEvent\StandardStateEvent.cpp" />
+    <ClCompile Include="StateEvent\StateEventManager.cpp" />
+    <ClCompile Include="WindowState\GameState.cpp" />
+    <ClCompile Include="WindowState\GeneralData.cpp" />
+    <ClCompile Include="Map\GridMap.cpp" />
+    <ClCompile Include="GUI\GuiButton.cpp" />
+    <ClCompile Include="GUI\GuiFlipableContainer.cpp" />
+    <ClCompile Include="WindowState\GuiGameState.cpp" />
+    <ClCompile Include="GUI\GuiManager.cpp" />
+    <ClCompile Include="Component\HealthComponent.cpp" />
+    <ClCompile Include="WindowState\LoadingState.cpp" />
+    <ClCompile Include="WindowState\LoadingTask.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="WindowState\MenuState.cpp" />
+    <ClCompile Include="Map\AStarPathFinder.cpp" />
+    <ClCompile Include="WindowState\PauseState.cpp" />
+    <ClCompile Include="Component\PlayerComponent.cpp" />
+    <ClCompile Include="System\PlayerSystem.cpp" />
+    <ClCompile Include="Event\PrintEvent.cpp" />
+    <ClCompile Include="System\RenderingSpriteSystem.cpp" />
+    <ClCompile Include="Component\ScriptUpdateComponent.cpp" />
+    <ClCompile Include="System\SingleEntitySystem.cpp" />
+    <ClCompile Include="Component\SpriteComponent.cpp" />
+    <ClCompile Include="WindowState\State.cpp" />
+    <ClCompile Include="WindowState\StateStack.cpp" />
+    <ClCompile Include="System\System.cpp" />
+    <ClCompile Include="System\SystemManager.cpp" />
+    <ClCompile Include="Component\TextDisplayComponent.cpp" />
+    <ClCompile Include="Resource\TextureStringManager.cpp" />
+    <ClCompile Include="Map\TiledMapSystem.cpp" />
+    <ClCompile Include="Component\TimerComponent.cpp" />
+    <ClCompile Include="Helper\Utility.cpp" />
+    <ClCompile Include="Component\VertexNodeComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Component\ParticleEmitterComponent.h" />
+    <ClInclude Include="Helper\RayCast.h" />
+    <ClInclude Include="Component\SpaceShipComponent.h" />
+    <ClInclude Include="Component\PlanetSpawnComponent.h" />
+    <ClInclude Include="Event\InvasionEvent.h" />
+    <ClInclude Include="System\PlanetSpawnSystem.h" />
+    <ClInclude Include="System\ThorParticleSystem.h" />
+    <ClInclude Include="WindowState\GameOverState.h" />
+    <ClInclude Include="GUI\OrderSpriteBar.h" />
+    <ClInclude Include="System\AnimationSystem.h" />
+    <ClInclude Include="Audio\AudioManager.h" />
+    <ClInclude Include="Component\AI\ScriptAIComponent.h" />
+    <ClInclude Include="Component\AI\ScriptAIState.h" />
+    <ClInclude Include="Component\AI\ScriptAITransition.h" />
+    <ClInclude Include="Component\AI\SteeringBehavior.h" />
+    <ClInclude Include="Event\EntityCollidesEntityEvent.h" />
+    <ClInclude Include="CustomBox2D\Fixture\BaseFixtureData.h" />
+    <ClInclude Include="CustomBox2D\Fixture\FixtureData.h" />
+    <ClInclude Include="CustomBox2D\Fixture\PolygonFixtureData.h" />
+    <ClInclude Include="Component\RealTimeInputComponent.h" />
+    <ClInclude Include="GUI\CircleBar.h" />
+    <ClInclude Include="GUI\MeterBar.h" />
+    <ClInclude Include="Component\InstanceComponent.h" />
+    <ClInclude Include="System\ScriptAISystem.h" />
+    <ClInclude Include="System\RealTimeInputSystem.h" />
+    <ClInclude Include="StateEvent\Command\BaseStateEventCommand.h" />
+    <ClInclude Include="Event\AllEventsHeader.h" />
+    <ClInclude Include="Event\PlayerCollidesSolidEntityEvent.h" />
+    <ClInclude Include="StateEvent\StateEventsIdentifier.h" />
+    <ClInclude Include="System\JumpSystem.h" />
+    <ClInclude Include="System\ScriptUpdateSystem.h" />
+    <ClInclude Include="Component\AllEntityComponentsHeader.h" />
+    <ClInclude Include="Helper\Math.h" />
+    <ClInclude Include="Component\JumpComponent.h" />
+    <ClInclude Include="System\AllSystemsHeader.h" />
+    <ClInclude Include="Component\Animation.h" />
+    <ClInclude Include="Component\AnimationComponent.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Component\AutoBody2dMovementComponent.h" />
+    <ClInclude Include="System\AutoBody2dMovementSystem.h" />
+    <ClInclude Include="System\AutomaticMovementSystem.h" />
+    <ClInclude Include="Component\AutomaticPathComponent.h" />
+    <ClInclude Include="GUI\GUIAction\BaseAction.h" />
+    <ClInclude Include="Event\BaseEvent.h" />
+    <ClInclude Include="GUI\BaseGuiComponent.h" />
+    <ClInclude Include="StateEvent\BaseStateEvent.h" />
+    <ClInclude Include="System\BaseSystem.h" />
+    <ClInclude Include="Component\Body2dComponent.h" />
+    <ClInclude Include="System\Box2DWorldSystem.h" />
+    <ClInclude Include="C:\entityx-1.2.0\entityx\3rdparty\simplesignal.h" />
+    <ClInclude Include="C:\libtmx-parser-master\src\tmxparser.h" />
+    <ClInclude Include="C:\LuaBridge-master\Source\LuaBridge\LuaBridge.h" />
+    <ClInclude Include="C:\tinyxml2-master\tinyxml2.h" />
+    <ClInclude Include="System\Camera.h" />
+    <ClInclude Include="Component\CategoryComponent.h" />
+    <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\ComponentArranger.h" />
+    <ClInclude Include="Component\ComponentIdentifier.h" />
+    <ClInclude Include="Helper\Constant.h" />
+    <ClInclude Include="Component\DestroyableComponent.h" />
+    <ClInclude Include="System\DualEntitySystem.h" />
+    <ClInclude Include="CustomBox2D\EngineContactListener.h" />
+    <ClInclude Include="Entity\Entity.h" />
+    <ClInclude Include="Component\EntityChildrenComponent.h" />
+    <ClInclude Include="Event\EntityClickedEvent.h" />
+    <ClInclude Include="Entity\EntityManager.h" />
+    <ClInclude Include="Component\EntityParentComponent.h" />
+    <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\EventManager.h" />
+    <ClInclude Include="CustomBox2D\Fixture\TileSideFixtureData.h" />
+    <ClInclude Include="Tile\TileSidesSensorGenerator.h" />
+    <ClInclude Include="WindowState\Game.h" />
+    <ClInclude Include="Component\ObstacleComponent.h" />
+    <ClInclude Include="System\ObstacleSystem.h" />
+    <ClInclude Include="CustomBox2D\SfDebugB2Draw.h" />
+    <ClInclude Include="StateEvent\StandardStateEvent.h" />
+    <ClInclude Include="StateEvent\StateEventManager.h" />
+    <ClInclude Include="WindowState\GameState.h" />
+    <ClInclude Include="WindowState\GeneralData.h" />
+    <ClInclude Include="Map\GridMap.h" />
+    <ClInclude Include="Map\GridNode.h" />
+    <ClInclude Include="GUI\GuiButton.h" />
+    <ClInclude Include="GUI\GuiFlipableContainer.h" />
+    <ClInclude Include="WindowState\GuiGameState.h" />
+    <ClInclude Include="GUI\GuiManager.h" />
+    <ClInclude Include="Component\HealthComponent.h" />
+    <ClInclude Include="WindowState\LoadingState.h" />
+    <ClInclude Include="WindowState\LoadingTask.h" />
+    <ClInclude Include="WindowState\MenuState.h" />
+    <ClInclude Include="Map\MovingNode.h" />
+    <ClInclude Include="Map\ObjectsType.h" />
+    <ClInclude Include="Map\AStarPathFinder.h" />
+    <ClInclude Include="WindowState\PauseState.h" />
+    <ClInclude Include="Component\PlayerComponent.h" />
+    <ClInclude Include="System\PlayerSystem.h" />
+    <ClInclude Include="Event\PrintEvent.h" />
+    <ClInclude Include="System\RenderingSpriteSystem.h" />
+    <ClInclude Include="Resource\ResourceHolder.h" />
+    <ClInclude Include="Resource\ResourceHolderType.h" />
+    <ClInclude Include="Component\ScriptUpdateComponent.h" />
+    <ClInclude Include="System\SingleEntitySystem.h" />
+    <ClInclude Include="Component\SpriteComponent.h" />
+    <ClInclude Include="WindowState\State.h" />
+    <ClInclude Include="WindowState\WindowStateIdentifier.h" />
+    <ClInclude Include="WindowState\StateStack.h" />
+    <ClInclude Include="System\System.h" />
+    <ClInclude Include="System\SystemManager.h" />
+    <ClInclude Include="Component\TextDisplayComponent.h" />
+    <ClInclude Include="Resource\TextureStringManager.h" />
+    <ClInclude Include="Map\TiledMapSystem.h" />
+    <ClInclude Include="Component\TimerComponent.h" />
+    <ClInclude Include="Helper\Utility.h" />
+    <ClInclude Include="Component\VertexNodeComponent.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

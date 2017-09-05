@@ -1,0 +1,33 @@
+/*OUTDATED for now*/
+
+bodyType ("dynamic", "kinematic", "static")
+positionX(enter pixel q)
+positionY(enter pixel q)
+baseSpeed(enter pixel q)
+fixture : {
+  density(enter meter q)
+  friction(enter meter q)
+  resitution(enter meter q)
+  
+  shape : {
+    shapeType("Polygon", "Circle", "Box")
+    Circle = [
+      radius(enter pixel q)
+    ]
+    Box = [
+      width(enter pixel q)
+      height(enter pixel q)
+      originX(enter pixel q)
+      originY(enter pixel q)
+    ]
+    Polygon = [
+      polygonPoints : {{posX, posY}, {posX, posY}}(enter pixel q)
+    ]
+  }
+  category = Category.etc
+  categoryToBeCollided = {
+    Category.etc,
+    Caategory.etc
+  }
+  
+}

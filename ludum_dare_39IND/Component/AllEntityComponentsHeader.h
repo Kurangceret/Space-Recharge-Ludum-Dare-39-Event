@@ -1,0 +1,26 @@
+#ifndef ALLENTITYCOMPONENTSHEADER_H
+#define ALLENTITYCOMPONENTSHEADER_H
+
+#include "SpriteComponent.h"
+#include "HealthComponent.h"
+#include "AnimationComponent.h"
+#include "ScriptUpdateComponent.h"
+#include "CategoryComponent.h"
+#include "EntityParentComponent.h"
+#include "TextDisplayComponent.h"
+#include "TimerComponent.h"
+#include "DestroyableComponent.h"
+#include "EntityChildrenComponent.h"
+#include "PlayerComponent.h"
+#include "AutomaticPathComponent.h"
+#include "Body2dComponent.h"
+#include "ObstacleComponent.h"
+#include "AutoBody2dMovementComponent.h"
+#include "JumpComponent.h"
+#include "RealTimeInputComponent.h"
+#include "AI\ScriptAIComponent.h"
+#include "InstanceComponent.h"
+#include "ParticleEmitterComponent.h"
+#include "SpaceShipComponent.h"
+#include "PlanetSpawnComponent.h"
+#endif

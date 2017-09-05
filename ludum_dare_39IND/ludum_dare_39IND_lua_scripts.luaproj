@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e95b3779-1c4b-4628-b437-f495f01ef883}</ProjectGuid>
+    <!--$guid1$-->
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\AudioScripts\" />
+    <Folder Include="Scripts\EngineSystemScripts\" />
+    <Folder Include="Scripts\EntityScripts\" />
+    <Folder Include="Scripts\EntityScripts\EnemyEntityScripts\" />
+    <Folder Include="Scripts\EntityScripts\EnemyEntityScripts\AIScripts\" />
+    <Folder Include="Scripts\EntityScripts\ProjectileEntityScripts\" />
+    <Folder Include="Scripts\AnimationScripts\" />
+    <Folder Include="Scripts\SettingScripts\" />
+    <Folder Include="Scripts\StateEventScripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\AnimationScripts\PlayerAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\Type2SpaceShipAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\Type1SpaceShipAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\SpaceShipColorLaserAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\SpaceShipLaserAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\UfoMissileAnimation.lua" />
+    <Compile Include="Scripts\AnimationScripts\UfoLaserAnimation.lua" />
+    <Compile Include="Scripts\AudioScripts\AudioDirectoryData.lua" />
+    <Compile Include="Scripts\CategoryScript.lua" />
+    <Compile Include="Scripts\EntityScripts\Asteroid_25_16.lua" />
+    <Compile Include="Scripts\EntityScripts\Asteroid_45_43.lua" />
+    <Compile Include="Scripts\EntityScripts\Asteroid_73_50.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\AIScripts\AttackPlanetAI.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\AIScripts\AttackPlayerAI.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\AIScripts\AttackPlayerV33AI.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\PlanetEnemy.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\Type2SpaceShip.lua" />
+    <Compile Include="Scripts\EntityScripts\EnemyEntityScripts\Type1SpaceShip.lua" />
+    <Compile Include="Scripts\EntityScripts\InvisibleDestroyerNode.lua" />
+    <Compile Include="Scripts\EntityScripts\GrassTileScript.lua" />
+    <Compile Include="Scripts\EntityScripts\InvisibleObstacleGridNodeTile.lua" />
+    <Compile Include="Scripts\EntityScripts\CommonBox2DTileScript.lua" />
+    <Compile Include="Scripts\ConstantScript.lua" />
+    <Compile Include="Scripts\EngineSystemScripts\RenderingSpriteSystem.lua" />
+    <Compile Include="Scripts\EntityScriptDirectoryData.lua" />
+    <Compile Include="Scripts\EntityScripts\PlanetEarth.lua" />
+    <Compile Include="Scripts\EntityScripts\PlayerEntityScript.lua" />
+    <Compile Include="Scripts\EntityScripts\ProjectileEntityScripts\ProjectileRect32x4.lua" />
+    <Compile Include="Scripts\EntityScripts\ProjectileEntityScripts\SpaceShipColorLaser.lua" />
+    <Compile Include="Scripts\EntityScripts\ProjectileEntityScripts\SpaceShipLaser.lua" />
+    <Compile Include="Scripts\EntityScripts\ProjectileEntityScripts\UfoMissile.lua" />
+    <Compile Include="Scripts\EntityScripts\ProjectileEntityScripts\UfoLaser.lua" />
+    <Compile Include="Scripts\GameObjectAdderScript.lua" />
+    <Compile Include="Scripts\GameObjectTypeScript.lua" />
+    <Compile Include="Scripts\script.lua" />
+    <Compile Include="Scripts\script2.lua" />
+    <Compile Include="Scripts\SettingScripts\StartupScript.lua" />
+    <Compile Include="Scripts\SettingScripts\WindowSettingScript.lua" />
+    <Compile Include="Scripts\StateEventScripts\StandardStateEvent.lua" />
+    <Compile Include="Scripts\UtilityFunctionScript.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Body2dMemberDataDoc.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
