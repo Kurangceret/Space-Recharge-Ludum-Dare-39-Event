@@ -9,6 +9,7 @@
 
 #include "../CustomBox2D/SfDebugB2Draw.h"
 #include "../CustomBox2D/EngineContactListener.h"
+#include "../Post_Effects/BloomEffect.h"
 
 class PrintEvent;
 
@@ -29,6 +30,9 @@ private:
 	void bindPrintEvent(const PrintEvent* printEvent);
 
 	void processCameraInput(sf::Time dt);
+
+	void init_opengl();
+
 private:
 	sf::RenderWindow& mWindow;
 	GeneralData* mGeneralData;
@@ -45,6 +49,10 @@ private:
 
 	thor::ParticleSystem m_particle_system;
 	sf::Texture m_particle_texture;
+
+	BloomEffect m_bloom_effect;
+	sf::RenderTexture m_screen_texture;
+	sf::RenderTexture m_final_screen_texture;
 	//Camera mCamera;
 };
 

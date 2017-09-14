@@ -164,11 +164,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\libtmx-parser-master\src\tmxparser.cpp" />
     <ClCompile Include="..\..\..\tinyxml2-master\tinyxml2.cpp" />
+    <ClCompile Include="Post_Effects\BloomEffect.cpp" />
     <ClCompile Include="Component\ParticleEmitterComponent.cpp" />
     <ClCompile Include="Helper\RayCast.cpp" />
     <ClCompile Include="Component\SpaceShipComponent.cpp" />
     <ClCompile Include="Component\PlanetSpawnComponent.cpp" />
     <ClCompile Include="Event\InvasionEvent.cpp" />
+    <ClCompile Include="Post_Effects\PostEffect.cpp" />
     <ClCompile Include="System\PlanetSpawnSystem.cpp" />
     <ClCompile Include="System\ThorParticleSystem.cpp" />
     <ClCompile Include="WindowState\GameOverState.cpp" />
@@ -264,11 +266,13 @@
     <ClCompile Include="Component\VertexNodeComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Post_Effects\BloomEffect.h" />
     <ClInclude Include="Component\ParticleEmitterComponent.h" />
     <ClInclude Include="Helper\RayCast.h" />
     <ClInclude Include="Component\SpaceShipComponent.h" />
     <ClInclude Include="Component\PlanetSpawnComponent.h" />
     <ClInclude Include="Event\InvasionEvent.h" />
+    <ClInclude Include="Post_Effects\PostEffect.h" />
     <ClInclude Include="System\PlanetSpawnSystem.h" />
     <ClInclude Include="System\ThorParticleSystem.h" />
     <ClInclude Include="WindowState\GameOverState.h" />
@@ -377,6 +381,13 @@
     <ClInclude Include="Component\TimerComponent.h" />
     <ClInclude Include="Helper\Utility.h" />
     <ClInclude Include="Component\VertexNodeComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Add_FS.frag" />
+    <None Include="Shaders\Blur_FS.frag" />
+    <None Include="Shaders\Bright_Pass_FS.frag" />
+    <None Include="Shaders\Downsample_FS.frag" />
+    <None Include="Shaders\Vert_VS.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

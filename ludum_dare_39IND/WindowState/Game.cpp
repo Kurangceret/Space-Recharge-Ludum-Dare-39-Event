@@ -15,6 +15,8 @@
 
 #include <Thor\Particles\Emitters.hpp>
 #include <Thor\Math\Distributions.hpp>
+#include <SFML/Graphics/RenderTexture.hpp>
+#include <SFML/OpenGL.hpp>
 
 Game::Game(GeneralData* generalData, sf::RenderWindow& window, 
 	lua_State* luaState, StateEventManager* stateEventManager)
@@ -26,9 +28,15 @@ mSfDebugB2Draw(mWindow),
 mEngineContactListener(*mGeneralData->mEntityManager.get()),
 mDoEventCheck(true)
 {
-	
-	
-	
+	//generalData->mTiledMap->getMapSize();
+
+	sf::Vector2f real_map_size = generalData->mTiledMap->getMapSize() * generalData->mTiledMap->getTileSize().x;
+
+	//m_screen_texture.create(real_map_size.x, real_map_size.y);
+	m_screen_texture.create(window.getSize().x, window.getSize().y);
+
+	m_final_screen_texture.create(window.getSize().x, window.getSize().y);
+
 	/*EventManager::getInstance()->addListener<PrintEvent>(Utility::convertPointerToAddress(this), 
 			std::bind(&Game::bindPrintEvent, this, std::placeholders::_1));*/
 	//mWaveEntitySpawner.readWaveScript(Constant::scriptDir + "Wave1Script.lua", luaState);
@@ -59,17 +67,49 @@ Game::~Game()
 void Game::draw()
 {
 	SystemManager* systemManager = mGeneralData->getSystemManager();
+
+	m_screen_texture.clear();
+	m_screen_texture.setView(mWindow.getView());
 	
-	mWindow.draw(mBGSprite);
-	mStateEventManager->drawStateEvent(mWindow, sf::RenderStates(), States::Game);
+	//mWindow.draw(mBGSprite);
+	m_screen_texture.draw(mBGSprite);
+
+	mStateEventManager->drawStateEvent(m_screen_texture, sf::RenderStates(), States::Game);
 	//mGeneralData->mFourTree->draw(mWindow);
-	systemManager->draw<RenderingSpriteSystem>(mWindow, sf::RenderStates());
-	systemManager->draw<ThorParticleSystem>(mWindow, sf::RenderStates());
+
+	
+
+
+	systemManager->draw<RenderingSpriteSystem>(m_screen_texture, sf::RenderStates());
+	systemManager->draw<ThorParticleSystem>(m_screen_texture, sf::RenderStates());
+
+	m_screen_texture.display();
+
+	//mWindow.draw(sf::Sprite(m_screen_texture.getTexture()));
+
+	m_final_screen_texture.clear();
+
+	m_bloom_effect.apply(m_screen_texture, m_final_screen_texture);
+	m_final_screen_texture.display();
+
+	sf::Sprite tex_sprite(m_final_screen_texture.getTexture());
+
+	tex_sprite.setOrigin(tex_sprite.getTextureRect().width / 2.f, tex_sprite.getTextureRect().height / 2.f);
+
+	tex_sprite.setPosition(mWindow.getView().getCenter());
+
+	mWindow.draw(tex_sprite);
+
 	//mWindow.draw(m_particle_system);
 
-	systemManager->draw<AutomaticMovementSystem>(mWindow, sf::RenderStates());
+	//systemManager->draw<AutomaticMovementSystem>(mWindow, sf::RenderStates());
 	//mGeneralData->mB2World->DrawDebugData();
 		
+}
+
+void Game::init_opengl()
+{
+	
 }
 
 void Game::update(sf::Time dt)

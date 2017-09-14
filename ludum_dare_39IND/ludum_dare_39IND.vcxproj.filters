@@ -101,6 +101,8 @@
     <ClCompile Include="System\PlanetSpawnSystem.cpp" />
     <ClCompile Include="Event\InvasionEvent.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Post_Effects\PostEffect.cpp" />
+    <ClCompile Include="Post_Effects\BloomEffect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\entityx-1.2.0\entityx\3rdparty\simplesignal.h" />
@@ -216,5 +218,14 @@
     <ClInclude Include="Component\PlanetSpawnComponent.h" />
     <ClInclude Include="System\PlanetSpawnSystem.h" />
     <ClInclude Include="Event\InvasionEvent.h" />
+    <ClInclude Include="Post_Effects\PostEffect.h" />
+    <ClInclude Include="Post_Effects\BloomEffect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Bright_Pass_FS.frag" />
+    <None Include="Shaders\Blur_FS.frag" />
+    <None Include="Shaders\Downsample_FS.frag" />
+    <None Include="Shaders\Vert_VS.vert" />
+    <None Include="Shaders\Add_FS.frag" />
   </ItemGroup>
 </Project>

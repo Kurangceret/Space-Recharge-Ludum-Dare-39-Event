@@ -20,6 +20,8 @@ namespace Constant{
 	const std::string soundEffectDir = audioDir + "SoundEffects/";
 	const std::string musicDir = audioDir + "Musics/";
 
+
+	const std::string shader_dir = "Shaders/";
 	const std::string levelDir = "Levels/";
 	const std::string scriptDir = "Scripts/";
 	const std::string audioScriptDir = scriptDir + "AudioScripts/";
